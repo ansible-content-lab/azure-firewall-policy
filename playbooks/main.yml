@@ -15,7 +15,7 @@
       ignore_errors: yes
       ansible.builtin.uri:
         url: "http://{{ item['url'] }}"
-        method: GET
+        method: HEAD
         return_content: false
 
     - name: Walking through my list of urls on port 443
@@ -24,5 +24,5 @@
       ignore_errors: yes
       ansible.builtin.uri:
         url: "https://{{ item['url'] }}"
-        method: GET
+        method: HEAD
         return_content: false
