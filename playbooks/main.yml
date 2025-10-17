@@ -21,6 +21,7 @@
         status_code: [200, 404]
 
     - name: Print out websites_status_port_80
+      no_log: true
       loop: "{{ websites_status_port_80['results'] }}"
       ansible.builtin.debug:
         msg: "redirected:{{ item['redirected'] }} url:{{ item['url'] }} status:{{ item['status'] }}"
