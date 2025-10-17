@@ -21,7 +21,7 @@
         status_code: [200, 404]
 
     - name: Print out websites_status_port_80
-      loop: "{{ websites_status_port_80, wantlist=true }}"
+      loop: "{{ websites_status_port_80 }}"
       ansible.builtin.debug:
         msg: "{{ item['url'] }}"
 
