@@ -17,7 +17,7 @@
         url: "http://{{ item['url'] }}"
         method: "{{ item['method'] }}"
         status_code: "{{ item['status'] }}"
-        return_content: false
+        return_content: true
         validate_certs: false
         follow_redirects: all
 
