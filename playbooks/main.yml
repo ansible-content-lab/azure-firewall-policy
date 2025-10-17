@@ -17,6 +17,7 @@
         url: "http://{{ item['url'] }}"
         method: HEAD
         return_content: false
+        validate_certs: false
 
     - name: Walking through my list of urls on port 443
       delegate_to: 127.0.0.1
@@ -26,3 +27,4 @@
         url: "https://{{ item['url'] }}"
         method: HEAD
         return_content: false
+        validate_certs: false
