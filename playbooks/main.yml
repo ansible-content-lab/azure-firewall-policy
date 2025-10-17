@@ -15,7 +15,8 @@
       ignore_errors: yes
       ansible.builtin.uri:
         url: "http://{{ item['url'] }}"
-        method: HEAD
+        method: "{{ item['method'] }}"
+        status_code: "{{ item['status'] }}"
         return_content: false
         validate_certs: false
         follow_redirects: all
@@ -26,7 +27,8 @@
       ignore_errors: yes
       ansible.builtin.uri:
         url: "https://{{ item['url'] }}"
-        method: HEAD
+        method: "{{ item['method'] }}"
+        status_code: "{{ item['status'] }}"
         return_content: false
         validate_certs: false
         follow_redirects: all
