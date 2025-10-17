@@ -21,8 +21,9 @@
         status_code: [200, 404]
 
     - name: Print out websites_status_port_80
+      loop: "{{ websites_status_port_80 }}"
       ansible.builtin.debug:
-        var: websites_status_port_80
+        msg: "{{ item['results']['url'] }}"
 
     - name: Walking through my list of urls on port 443
       delegate_to: 127.0.0.1
