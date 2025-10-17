@@ -20,11 +20,6 @@
         return_content: false
         status_code: [200, 404]
 
-    - name: Print out websites_status_port_80
-      loop: "{{ websites_status_port_80['results'] | json_query('results[*].msg') }}"
-      ansible.builtin.debug:
-        msg: "redirected:{{ item['redirected'] }} url:{{ item['url'] }} status:{{ item['status'] }}"
-
     - name: Walking through my list of urls on port 443
       delegate_to: 127.0.0.1
       loop: "{{ websites }}"
@@ -35,7 +30,3 @@
         method: GET
         return_content: false
         status_code: [200, 404]
-
-    - name: Print out websites_status_port_443
-      ansible.builtin.debug:
-        var: websites_status_port_443
