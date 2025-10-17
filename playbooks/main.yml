@@ -12,19 +12,15 @@
     - name: Walking through my list of urls on port 80
       delegate_to: 127.0.0.1
       loop: "{{ websites }}"
-      ignore_unreachable: true
       ansible.builtin.uri:
         url: "http://{{ item['url'] }}"
         method: GET
         return_content: false
-        status_code: [200, 404, -1]
 
     - name: Walking through my list of urls on port 443
       delegate_to: 127.0.0.1
       loop: "{{ websites }}"
-      ignore_unreachable: true
       ansible.builtin.uri:
         url: "https://{{ item['url'] }}"
         method: GET
         return_content: false
-        status_code: [200, 404, -1]
