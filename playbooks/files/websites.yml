@@ -2,3 +2,16 @@
 websites:
   - url: redhat.com
   - url: registry.redhat.io
+  - url: quay.io
+  - url: letsencrypt.org
+  - url: gcr.io
+  - url: googleapis.com
+  - url: microsoftonline.com
+  - url: mcr.microsoft.com
+  - url: dynatrace.com
+  - url: segment.io
+  - url: github.com
+  - url: azure.com
+  - url: azureedge.net
+  - url: login.microsoftonline.com
+  - url: consul.segment.io
