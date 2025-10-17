@@ -18,6 +18,7 @@
         method: HEAD
         return_content: false
         validate_certs: false
+        follow_redirects: true
 
     - name: Walking through my list of urls on port 443
       delegate_to: 127.0.0.1
@@ -28,3 +29,4 @@
         method: HEAD
         return_content: false
         validate_certs: false
+        follow_redirects: true
