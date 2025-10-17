@@ -18,6 +18,7 @@
         url: "http://{{ item['url'] }}"
         method: GET
         return_content: false
+        status_code: [200, 404]
 
     - name: Print out websites_status_port_80
       ansible.builtin.debug:
@@ -32,6 +33,7 @@
         url: "https://{{ item['url'] }}"
         method: GET
         return_content: false
+        status_code: [200, 404]
 
     - name: Print out websites_status_port_443
       ansible.builtin.debug:
