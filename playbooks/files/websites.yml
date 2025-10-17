@@ -5,7 +5,7 @@ websites:
     method: HEAD
   - url: registry.redhat.io
     status: 200
-    method: PUT
+    method: CONNECT
   - url: quay.io
     status: 200
     method: HEAD
