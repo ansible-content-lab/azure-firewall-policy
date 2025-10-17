@@ -13,7 +13,7 @@
       delegate_to: 127.0.0.1
       loop: "{{ websites }}"
       register: websites_status_port_80
-      failed_when: websites_status_port_80['status'] is not defined
+      failed_when: websites_status_port_80['status'] == -1
       ansible.builtin.uri:
         url: "http://{{ item['url'] }}"
         method: GET
@@ -24,7 +24,7 @@
       delegate_to: 127.0.0.1
       loop: "{{ websites }}"
       register: websites_status_port_443
-      failed_when: websites_status_port_443['status'] is not defined
+      failed_when: websites_status_port_443['status'] == -1
       ansible.builtin.uri:
         url: "https://{{ item['url'] }}"
         method: GET
