@@ -12,6 +12,7 @@
     - name: Walking through my list of urls on port 80
       delegate_to: 127.0.0.1
       loop: "{{ websites }}"
+      ignore_errors: yes
       ansible.builtin.uri:
         url: "http://{{ item['url'] }}"
         method: GET
@@ -20,6 +21,7 @@
     - name: Walking through my list of urls on port 443
       delegate_to: 127.0.0.1
       loop: "{{ websites }}"
+      ignore_errors: yes
       ansible.builtin.uri:
         url: "https://{{ item['url'] }}"
         method: GET
