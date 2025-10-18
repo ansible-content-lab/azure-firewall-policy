@@ -16,7 +16,7 @@ websites:
     status: 200
     method: GET
   - url: googleapis.com
-    status: 200
+    status: 404
     method: HEAD
   - url: microsoftonline.com
     status: 200
