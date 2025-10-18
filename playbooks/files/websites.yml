@@ -17,7 +17,7 @@ websites:
     method: GET
   - url: googleapis.com
     status: 404
-    method: GET
+    method: POST
   - url: microsoftonline.com
     status: -1
     method: POST
