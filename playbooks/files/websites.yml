@@ -23,7 +23,7 @@ websites:
     method: HEAD
   - url: mcr.microsoft.com
     status: 200
-    method: HEAD
+    method: GET
   - url: dynatrace.com
     status: 200
     method: HEAD
