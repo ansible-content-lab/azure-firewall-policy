@@ -20,7 +20,7 @@ websites:
     method: HEAD
   - url: microsoftonline.com
     status: 200
-    method: HEAD
+    method: POST
   - url: mcr.microsoft.com
     status: 200
     method: GET
