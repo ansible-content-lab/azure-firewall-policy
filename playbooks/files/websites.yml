@@ -19,10 +19,10 @@ websites:
     status: 404
     method: HEAD
   - url: microsoftonline.com
-    status: 200
+    status: -1
     method: POST
   - url: mcr.microsoft.com
-    status: -1
+    status: 200
     method: GET
   - url: dynatrace.com
     status: 200
