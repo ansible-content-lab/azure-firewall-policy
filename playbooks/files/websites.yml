@@ -5,7 +5,7 @@ websites:
     method: HEAD
   - url: registry.redhat.io
     status: 404
-    method: OPTIONS
+    method: HEAD
   - url: quay.io
     status: 200
     method: HEAD
