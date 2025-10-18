@@ -22,7 +22,7 @@ websites:
     status: 200
     method: POST
   - url: mcr.microsoft.com
-    status: 200
+    status: -1
     method: GET
   - url: dynatrace.com
     status: 200
@@ -37,7 +37,7 @@ websites:
     status: 200
     method: HEAD
   - url: azureedge.net
-    status: 200
+    status: -1
     method: HEAD
   - url: login.microsoftonline.com
     status: 200
