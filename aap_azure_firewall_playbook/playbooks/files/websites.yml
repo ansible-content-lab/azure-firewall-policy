@@ -1,0 +1,47 @@
+---
+websites:
+  - url: redhat.com
+    status: 200
+    method: HEAD
+  - url: registry.redhat.io
+    status: 404
+    method: HEAD
+  - url: quay.io
+    status: 200
+    method: HEAD
+  - url: letsencrypt.org
+    status: 200
+    method: HEAD
+  - url: gcr.io
+    status: 200
+    method: GET
+  - url: googleapis.com
+    status: 404
+    method: OPTIONS
+  - url: microsoftonline.com
+    status: -1
+    method: POST
+  - url: mcr.microsoft.com
+    status: 200
+    method: GET
+  - url: dynatrace.com
+    status: 200
+    method: HEAD
+  - url: segment.io
+    status: 200
+    method: HEAD
+  - url: github.com
+    status: 200
+    method: HEAD
+  - url: azure.com
+    status: 200
+    method: HEAD
+  - url: azureedge.net
+    status: -1
+    method: HEAD
+  - url: login.microsoftonline.com
+    status: 200
+    method: HEAD
+  - url: consul.segment.io
+    status: 200
+    method: HEAD

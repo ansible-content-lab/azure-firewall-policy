@@ -1,0 +1,34 @@
+---
+- name: Check my websites
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - files/websites.yml
+
+  tasks:
+
+    - name: Walking through my list of urls on port 80
+      delegate_to: 127.0.0.1
+      loop: "{{ websites }}"
+      ignore_errors: yes
+      ansible.builtin.uri:
+        url: "http://{{ item['url'] }}"
+        method: "{{ item['method'] }}"
+        status_code: "{{ item['status'] }}"
+        return_content: false
+        validate_certs: false
+        follow_redirects: all
+
+    - name: Walking through my list of urls on port 443
+      delegate_to: 127.0.0.1
+      loop: "{{ websites }}"
+      ignore_errors: yes
+      ansible.builtin.uri:
+        url: "https://{{ item['url'] }}"
+        method: "{{ item['method'] }}"
+        status_code: "{{ item['status'] }}"
+        return_content: false
+        validate_certs: false
+        follow_redirects: all
