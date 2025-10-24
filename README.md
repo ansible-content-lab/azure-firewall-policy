@@ -1,4 +1,4 @@
-### **How to Run the AAP on Azure Firewall Diagnostic Playbook**
+### **How to Run an AAP on Azure Firewall Diagnostic Playbook**
 
 To ensure our SRE team can successfully configure, monitor, and maintain your Ansible Automation Platform (AAP) on Azure instance, your firewall must allow outbound connections to several key subdomains.
 
@@ -13,7 +13,7 @@ If you are experiencing connectivity issues, this diagnostic playbook will test 
 
 Before you begin, please ensure you have the following information:
 
-1.  **Repository URL:** `https://github.com/rraafffaa/AAP_Azure_Firewall`
+1.  **Repository URL:** `https://github.com/ansible-content-lab/azure-firewall-policy`
 2.  **Playbook Name:** `playbooks/main.yml`
 3.  **Permissions:** Administrative access to your AAP Controller UI.
 
