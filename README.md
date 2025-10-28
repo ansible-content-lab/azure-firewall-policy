@@ -84,3 +84,11 @@ You will be automatically redirected to the **Jobs** output screen, where you ca
     1.  Review the job output log on the screen. The playbook is designed to show *which* domain(s) failed the connection test.
     2.  Work with your internal network or security team to **allow outbound HTTPS (TCP port 443) access** to the specific domains listed in the failure message.
     3.  After your team has updated the firewall rules, return to **Templates** (Step 3) and **re-launch** the `Run Firewall Check` job to confirm the issue is resolved.
+
+> **Important:** Please use these results as a diagnostic starting point. A failure is a strong indicator of a blocking rule, but it can occasionally be a **false positive** caused by a temporary network issue.
+
+* **Next Steps:**
+    1.  Review the job output log. The playbook is designed to show *which* domain(s) failed the connection test.
+    2.  As a first step, work with your internal network or security team to **verify** that outbound HTTPS (TCP port 443) access is allowed for the domains listed in the failure message.
+    3.  After your team has **confirmed or updated** the firewall rules, return to **Templates** (Step 3) and **re-launch** the `Run Firewall Check` job to confirm the fix.
+    4.  If the job continues to fail, but your team has confirmed the rules are correct, please contact our support team for further investigation.
